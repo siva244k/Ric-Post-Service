@@ -1,6 +1,8 @@
 package com.ric.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ric.model.Post;
+
 import com.ric.service.PostService;
 
 @Controller
@@ -29,12 +32,11 @@ public class PostController {
 
 	@RequestMapping(value = PostRestURIConstants.GET_POST, method = RequestMethod.GET)
 	@ResponseBody
-	public String getPost(@PathVariable("id") int id) {
+	public ResponseEntity<Post>  getPost(@PathVariable("id") int id) {
 
-		Post post = new Post();
-		post.setId(id);
-
-		return postService.getPost(id).toString();
+	
+		ResponseEntity<Post> response=new ResponseEntity<Post>(postService.getPost(id),HttpStatus.OK);
+		return response;
 
 	}
 
