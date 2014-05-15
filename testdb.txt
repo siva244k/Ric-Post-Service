@@ -1,0 +1,1 @@
+create table postdata (id int(5) not null auto_increment,position varchar(50),skill varchar(50),location varchar(50),exp_from int(2),exp_to int(2),primary key(id));

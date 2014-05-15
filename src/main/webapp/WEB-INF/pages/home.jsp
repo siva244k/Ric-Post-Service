@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Post Service</title>
-<h2>CREATE_POST = http://localhost:8080/RicPostService/post/rest/position/{position}/skill/{skill}/location/{location}/exp_from/{exp_from:\\d+}/exp_to/{exp_to:\\d+}
+<h2>CREATE_POST = http://localhost:8080/RicPostService/post/rest/position/{position}/skill/{skill}/location/{location}/expfrom/{expfrom:\\d+}/expto/{expto:\\d+}
 <br/>
 GET_POST = "http://localhost:8080/RicPostService/post/rest/id/{id:\\d+}"</h2>
 </head>
