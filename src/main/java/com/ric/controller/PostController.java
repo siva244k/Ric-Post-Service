@@ -25,7 +25,7 @@ public class PostController {
 	@Autowired
 	private PostService postService;
 
-	@RequestMapping(value = PostRestURIConstants.CREATE_POST, method = RequestMethod.GET)
+	@RequestMapping(value = PostRestURIConstants.CREATE_POST, method ={ RequestMethod.GET,RequestMethod.POST})
 	@ResponseBody
 	public String addPost(@ModelAttribute Post post) {
 
